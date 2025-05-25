@@ -10,7 +10,7 @@ public class HomeController(
     IMediator mediator) : Controller
 {
     /// <summary>
-    /// Главная страница.
+    /// Простой роут для проверки, что бекенд работает.
     /// </summary>
     /// <returns><see cref="string"/>.</returns>
     [HttpGet("/hello")]
