@@ -19,6 +19,9 @@ public static class ServiceCollectionExtensions
                 opt.UseNpgsql(configuration.GetConnectionString("ReReDesign"));
             });
         */
+
+        services.RegisterSettings<DtfLoginSettings>(configuration);
+
         services.Scan(scan => scan
             .FromAssemblyOf<ReReDesignContext>()
             .AddClasses(classes =>
@@ -28,4 +31,9 @@ public static class ServiceCollectionExtensions
             .AsImplementedInterfaces()
             .WithScopedLifetime());
     }
+
+    private static void RegisterSettings<TSettings>(this IServiceCollection services, IConfiguration configuration)
+        where TSettings : class =>
+        services.Configure<TSettings>(
+            configuration.GetSection(typeof(TSettings).Name));
 }

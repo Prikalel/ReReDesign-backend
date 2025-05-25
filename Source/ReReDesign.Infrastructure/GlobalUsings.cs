@@ -10,5 +10,7 @@ global using Microsoft.Extensions.Logging;
 global using Microsoft.Extensions.Options;
 global using Polly;
 global using Polly.Registry;
+global using VelikiyPrikalel.ReReDesign.Application.Services;
 global using VelikiyPrikalel.ReReDesign.Data;
 global using VelikiyPrikalel.ReReDesign.Infrastructure.Data;
+global using VelikiyPrikalel.ReReDesign.Infrastructure.Settings;
