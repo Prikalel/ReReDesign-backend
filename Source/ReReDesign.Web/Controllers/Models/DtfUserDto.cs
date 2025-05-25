@@ -5,4 +5,4 @@
 /// </summary>
 /// <param name="Id">Id.</param>
 /// <param name="Name">Имя.</param>
-public record DtfUser(int Id, string Name);
+public record DtfUserDto(int Id, string Name);
