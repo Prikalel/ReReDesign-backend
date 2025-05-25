@@ -33,7 +33,8 @@ public class Startup
         get
         {
             ServicesRegistrationSettings settings = new();
-            Configuration.Bind(settings);
+            Configuration.GetSection(nameof(ServicesRegistrationSettings))
+                .Bind(settings);
             return settings;
         }
     }

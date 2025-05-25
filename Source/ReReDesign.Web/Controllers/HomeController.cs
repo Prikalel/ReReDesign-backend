@@ -13,7 +13,7 @@ public class HomeController(
     /// Главная страница.
     /// </summary>
     /// <returns><see cref="string"/>.</returns>
-    [Route("/hello")]
+    [HttpGet("/hello")]
     public async Task<string> Hello()
     {
         logger.LogInformation("Hello world!");
