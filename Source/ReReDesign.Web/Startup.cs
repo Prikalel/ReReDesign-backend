@@ -5,7 +5,7 @@
 /// </summary>
 public class Startup
 {
-    private const string ServiceName = "ReReDesign";
+    private const string ServiceName = nameof(ReReDesign);
 
     /// <summary>
     /// Конструктор.
@@ -81,6 +81,8 @@ public class Startup
 
         services.AddMediator((MediatorOptions options) =>
             options.ServiceLifetime = ServiceLifetime.Scoped);
+
+        services.AddAutoMapper(x => x.AddProfile<WebProfile>());
 
         services.AddMemoryCache();
         services.AddSingleton<IAsyncCacheProvider, Polly.Caching.Memory.MemoryCacheProvider>();

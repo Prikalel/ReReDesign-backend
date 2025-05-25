@@ -2,6 +2,7 @@
 global using System.IO;
 global using System.Text.RegularExpressions;
 global using System.Threading.Tasks;
+global using AutoMapper;
 global using Mediator;
 global using VelikiyPrikalel.ReReDesign.Infrastructure;
 global using VelikiyPrikalel.ReReDesign.Web.Settings;
@@ -19,7 +20,9 @@ global using Polly;
 global using Polly.Caching;
 global using Polly.Registry;
 global using Swashbuckle.AspNetCore.SwaggerGen;
+global using VelikiyPrikalel.ReReDesign.Application.Models;
 global using VelikiyPrikalel.ReReDesign.Data;
 global using VelikiyPrikalel.ReReDesign.Infrastructure.Data;
 global using VelikiyPrikalel.ReReDesign.Web.Controllers.Models;
+global using VelikiyPrikalel.ReReDesign.Web.MapperProfiles;
 global using LogLevel = Microsoft.Extensions.Logging.LogLevel;
