@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <CsProjectName>ReReDesign.Infrastructure</CsProjectName>
+    <OutputPath>..\..\Out\$(Configuration)\$(CsProjectName)\</OutputPath>
+    <DocumentationFile>..\..\Out\$(Configuration)\$(CsProjectName)\VelikiyPrikalel.$(CsProjectName).xml</DocumentationFile>
+    <AssemblyName>VelikiyPrikalel.$(CsProjectName)</AssemblyName>
+    <RootNamespace>VelikiyPrikalel.$(CsProjectName)</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework6.Npgsql" Version="6.4.3" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+    <PackageReference Include="Polly.Caching.Memory" Version="3.0.2" />
+    <PackageReference Include="Polly.Core" Version="8.5.2" />
+    <PackageReference Include="Scrutor" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReReDesign.Application\ReReDesign.Application.csproj" />
+    <ProjectReference Include="..\ReReDesign.Data\ReReDesign.Data.csproj" />
+  </ItemGroup>
+
+</Project>

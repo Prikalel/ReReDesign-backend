@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <CsProjectName>ReReDesign.Application</CsProjectName>
+    <OutputPath>..\..\Out\$(Configuration)\$(CsProjectName)\</OutputPath>
+    <DocumentationFile>..\..\Out\$(Configuration)\$(CsProjectName)\VelikiyPrikalel.$(CsProjectName).xml</DocumentationFile>
+    <AssemblyName>VelikiyPrikalel.$(CsProjectName)</AssemblyName>
+    <RootNamespace>VelikiyPrikalel.$(CsProjectName)</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReReDesign.Data\ReReDesign.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mediator.Abstractions" Version="3.0.0-preview.65" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+  </ItemGroup>
+
+</Project>

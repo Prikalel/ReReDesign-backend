@@ -1,0 +1,14 @@
+﻿global using System;
+global using System.Diagnostics;
+global using System.Text.RegularExpressions;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.ChangeTracking;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using Microsoft.Extensions.Options;
+global using Polly;
+global using Polly.Registry;
+global using VelikiyPrikalel.ReReDesign.Data;
+global using VelikiyPrikalel.ReReDesign.Infrastructure.Data;
