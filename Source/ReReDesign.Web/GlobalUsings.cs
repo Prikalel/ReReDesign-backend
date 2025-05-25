@@ -20,6 +20,7 @@ global using Polly;
 global using Polly.Caching;
 global using Polly.Registry;
 global using Swashbuckle.AspNetCore.SwaggerGen;
+global using VelikiyPrikalel.ReReDesign.Application.Mediator;
 global using VelikiyPrikalel.ReReDesign.Application.Models;
 global using VelikiyPrikalel.ReReDesign.Data;
 global using VelikiyPrikalel.ReReDesign.Infrastructure.Data;
