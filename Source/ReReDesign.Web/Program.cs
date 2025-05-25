@@ -55,6 +55,8 @@ public class Program
             IHost build = CreateWebHostBuilder(args)
                 .Build();
 
+            EnsureMapperConfigurationIsValid(logger);
+
             /* uncomment to execute migrations on start
 
             using (IServiceScope scope = build.Services.CreateScope())
@@ -76,5 +78,15 @@ public class Program
         {
             LogManager.Shutdown();
         }
+    }
+
+    private static void EnsureMapperConfigurationIsValid(Logger logger)
+    {
+        logger.Debug("Checking mapper configuration...");
+        MapperConfiguration configuration = new(cfg =>
+            cfg.AddProfile<WebProfile>()
+        );
+        configuration.AssertConfigurationIsValid();
+        logger.Debug("Mapper configuration is valid!");
     }
 }
