@@ -21,4 +21,5 @@ global using Polly.Registry;
 global using Swashbuckle.AspNetCore.SwaggerGen;
 global using VelikiyPrikalel.ReReDesign.Data;
 global using VelikiyPrikalel.ReReDesign.Infrastructure.Data;
+global using VelikiyPrikalel.ReReDesign.Web.Controllers.Models;
 global using LogLevel = Microsoft.Extensions.Logging.LogLevel;
