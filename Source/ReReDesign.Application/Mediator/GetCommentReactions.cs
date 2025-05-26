@@ -16,13 +16,10 @@ public sealed class GetCommentReactions
     public sealed record Query(string PostId, string CommentId) : IRequest<GetReactionsResponseApplication>;
 
     /// <inheritdoc />
-    public sealed class Handler() : IRequestHandler<Query, GetReactionsResponseApplication>
+    public sealed class Handler(IDtfReactionsService dtfReactionsService) : IRequestHandler<Query, GetReactionsResponseApplication>
     {
         /// <inheritdoc />
-        public async ValueTask<GetReactionsResponseApplication> Handle(Query request, CancellationToken cancellationToken)
-        {
-            await Task.CompletedTask;
-            return new(new([new(new(12, "name"), 12313)])); // TODO
-        }
+        public async ValueTask<GetReactionsResponseApplication> Handle(Query request, CancellationToken cancellationToken) =>
+            await dtfReactionsService.GetCommentReactions(request.CommentId, cancellationToken);
     }
 }

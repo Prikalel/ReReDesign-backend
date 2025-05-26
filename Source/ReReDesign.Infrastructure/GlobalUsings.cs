@@ -1,5 +1,7 @@
 ﻿global using System;
 global using System.Diagnostics;
+global using System.Net.Http.Headers;
+global using System.Text.Json;
 global using System.Text.RegularExpressions;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -10,6 +12,7 @@ global using Microsoft.Extensions.Logging;
 global using Microsoft.Extensions.Options;
 global using Polly;
 global using Polly.Registry;
+global using VelikiyPrikalel.ReReDesign.Application.Models;
 global using VelikiyPrikalel.ReReDesign.Application.Models.Services.Auth;
 global using VelikiyPrikalel.ReReDesign.Application.Services;
 global using VelikiyPrikalel.ReReDesign.Data;
