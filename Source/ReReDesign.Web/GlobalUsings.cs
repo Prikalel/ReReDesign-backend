@@ -1,7 +1,9 @@
 ﻿global using System;
 global using System.IO;
+global using System.Net;
 global using System.Text.RegularExpressions;
 global using System.Threading.Tasks;
+global using System.Web.Http;
 global using AutoMapper;
 global using Mediator;
 global using VelikiyPrikalel.ReReDesign.Infrastructure;
@@ -26,4 +28,5 @@ global using VelikiyPrikalel.ReReDesign.Data;
 global using VelikiyPrikalel.ReReDesign.Infrastructure.Data;
 global using VelikiyPrikalel.ReReDesign.Web.Controllers.Models;
 global using VelikiyPrikalel.ReReDesign.Web.MapperProfiles;
+global using VelikiyPrikalel.ReReDesign.Web.Middlewares;
 global using LogLevel = Microsoft.Extensions.Logging.LogLevel;

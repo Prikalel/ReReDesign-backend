@@ -46,7 +46,7 @@ public class Startup
     /// <param name="env">Параметры окружения.</param>
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-        app.UseDeveloperExceptionPage();
+        app.UseMiddleware<HttpErrorResponseExceptionsHandler>();
 
         app.UseRouting();
 
