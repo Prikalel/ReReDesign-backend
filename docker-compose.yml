@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  reredesign_app:
+    build:
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ReReDesign_Backend_DtfLoginSettings__Email: "${dtf_email}"
+      ReReDesign_Backend_DtfLoginSettings__Password: "${dtf_password}"
+    ports:
+      - "5012:5012"
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
