@@ -3,7 +3,6 @@ global using System.IO;
 global using System.Net;
 global using System.Text.RegularExpressions;
 global using System.Threading.Tasks;
-global using System.Web.Http;
 global using AutoMapper;
 global using Mediator;
 global using VelikiyPrikalel.ReReDesign.Infrastructure;

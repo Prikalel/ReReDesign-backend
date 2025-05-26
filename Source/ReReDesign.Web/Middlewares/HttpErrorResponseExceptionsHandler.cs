@@ -25,7 +25,7 @@ public class HttpErrorResponseExceptionsHandler
         {
             await requestDelegate.Invoke(httpContext);
         }
-        catch (HttpResponseException e) when (e.Response.StatusCode != HttpStatusCode.OK)
+        catch (HttpRequestException e) when (e.StatusCode != HttpStatusCode.OK)
         {
             await WriteBadRequestResponse(httpContext, e.Message);
         }
