@@ -11,21 +11,19 @@ public class ReactionsController(
     IMediator mediator) : Controller
 {
     /// <summary>
-    /// Получить реакции на комментарий в посте <paramref name="postId"/>.
+    /// Получить реакции на комментарий в посте.
     /// </summary>
-    /// <param name="postId">Идентификатор поста, комментарий которого проверяем.</param>
-    /// <param name="commentId">Идентификатор комментария в посте <paramref name="postId"/>,
+    /// <param name="commentId">Идентификатор комментария в посте,
     /// на который хотим получить реакции.</param>
     /// <param name="cancellationToken">Токен отмены.</param>
     /// <returns><see cref="GetReactionsResponseDto"/>.</returns>
     [HttpGet("/comment")]
     public async Task<GetReactionsResponseDto> GetCommentReactions(
-        [FromQuery] string postId,
         [FromQuery] string commentId,
         CancellationToken cancellationToken)
     {
         GetReactionsResponseApplication queryResponse = await mediator
-            .Send(new GetCommentReactions.Query(postId, commentId), cancellationToken);
+            .Send(new GetCommentReactions.Query(commentId), cancellationToken);
 
         GetReactionsResponseDto responseDto = mapper.Map<GetReactionsResponseDto>(queryResponse);
 

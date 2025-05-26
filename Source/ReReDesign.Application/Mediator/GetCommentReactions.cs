@@ -8,12 +8,11 @@ public sealed class GetCommentReactions
     /// <summary>
     /// Запрос.
     /// </summary>
-    /// <param name="PostId">Идентификатор поста, комментарий которого проверяем.</param>
     /// <param name="CommentId">
-    /// Идентификатор комментария в посте <paramref name="PostId"/>,
+    /// Идентификатор комментария в посте,
     /// на который хотим получить реакции.
     /// </param>
-    public sealed record Query(string PostId, string CommentId) : IRequest<GetReactionsResponseApplication>;
+    public sealed record Query(string CommentId) : IRequest<GetReactionsResponseApplication>;
 
     /// <inheritdoc />
     public sealed class Handler(IDtfReactionsService dtfReactionsService) : IRequestHandler<Query, GetReactionsResponseApplication>
