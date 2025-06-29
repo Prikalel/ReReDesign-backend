@@ -5,4 +5,5 @@
 /// </summary>
 /// <param name="Id">Id.</param>
 /// <param name="Name">Имя.</param>
-public record DtfUserApplication(int Id, string Name);
+/// <param name="Avatar">Аватар пользователя.</param>
+public record DtfUserApplication(int Id, string Name, DtfAvatarApplication Avatar);

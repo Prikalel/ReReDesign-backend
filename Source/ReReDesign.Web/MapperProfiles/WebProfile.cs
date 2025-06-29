@@ -9,6 +9,8 @@ public class WebProfile : Profile
     public WebProfile()
     {
         CreateMap<DtfUserApplication, DtfUserDto>();
+        CreateMap<DtfAvatarApplication, DtfAvatarDto>();
+        CreateMap<DtfAvatarDataApplication, DtfAvatarDataDto>();
         CreateMap<GetReactionsResponseApplication, GetReactionsResponseDto>();
         CreateMap<ReactionsResultApplication, ReactionsResultDto>();
         CreateMap<UserReactionApplication, UserReactionDto>();
