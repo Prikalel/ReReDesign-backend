@@ -4,6 +4,7 @@ services:
   reredesign_app:
     build:
       dockerfile: Dockerfile
+      context: .
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       ReReDesign_Backend_DtfLoginSettings__Email: "${dtf_email}"
