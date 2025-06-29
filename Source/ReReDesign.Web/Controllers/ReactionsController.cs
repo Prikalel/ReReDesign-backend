@@ -33,4 +33,28 @@ public class ReactionsController(
 
         return responseDto;
     }
+
+    /// <summary>
+    /// Получить реакции на пост.
+    /// </summary>
+    /// <param name="postId">Идентификатор поста,
+    /// на который хотим получить реакции.</param>
+    /// <param name="cancellationToken">Токен отмены.</param>
+    /// <returns><see cref="GetReactionsResponseDto"/>.</returns>
+    [HttpGet("/post")]
+    public async Task<GetReactionsResponseDto> GetPostReactions(
+        [FromQuery] string postId,
+        CancellationToken cancellationToken)
+    {
+        GetReactionsResponseApplication queryResponse = await mediator
+            .Send(new GetPostReactions.Query(postId), cancellationToken);
+
+        GetReactionsResponseDto responseDto = mapper.Map<GetReactionsResponseDto>(queryResponse);
+
+        logger.LogInformation("Get reactions for post {Id} returned {Count} results",
+            postId,
+            responseDto.Result.Reactions.Count);
+
+        return responseDto;
+    }
 }

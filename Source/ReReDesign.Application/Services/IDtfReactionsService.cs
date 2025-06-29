@@ -12,4 +12,12 @@ public interface IDtfReactionsService
     /// <param name="cancellation">Токен отмены.</param>
     /// <returns><see cref="GetReactionsResponseApplication"/>.</returns>
     Task<GetReactionsResponseApplication> GetCommentReactions(string commentId, CancellationToken cancellation);
+
+    /// <summary>
+    /// Реакции на пост.
+    /// </summary>
+    /// <param name="postId">Идентификатор поста.</param>
+    /// <param name="cancellation">Токен отмены.</param>
+    /// <returns><see cref="GetReactionsResponseApplication"/>.</returns>
+    Task<GetReactionsResponseApplication> GetPostReactions(string postId, CancellationToken cancellation);
 }
